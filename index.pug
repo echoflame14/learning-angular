@@ -1,0 +1,28 @@
+doctype html
+html(lang='en', ng-app="avengerApp")
+	head
+		title avenger App
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='styles.css')
+	body(ng-controller="mainCtrl")
+		.hero-wrapper
+			.heroCard(ng-repeat="hero in avenge")
+				h1.heroName {{hero.name}}
+				.hero-image
+					img(ng-src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}")
+				h3 DESCRIPTION
+				h4.description {{hero.description || "CLASSIFIED"}}
+
+
+
+
+
+
+
+
+
+
+	script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js")
+	script(type="application/javascript", src="app.js")
+	script(type="text/javascript", src="mainCtrl.js")

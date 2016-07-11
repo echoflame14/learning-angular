@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="avengerApp">
+  <head>
+    <title>avenger App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <div class="hero-wrapper">
+      <div class="heroCard" ng-repeat="hero in avenge">
+        <h1 class="heroName">{{hero.name}}</h1>
+        <div class="hero-image"><img ng-src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}"></div>
+        <h3>DESCRIPTION</h3>
+        <h4 class="description">{{hero.description || "CLASSIFIED"}}</h4>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script type="application/javascript" src="app.js"></script>
+  <script type="text/javascript" src="mainCtrl.js"></script>
+</html>
