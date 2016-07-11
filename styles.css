@@ -1,3 +1,7 @@
+html {
+  background: url(http://img11.deviantart.net/0706/i/2012/175/6/c/punisher_symbol_wp_by_chaomanceromega-d54p5xn.png) fixed no-repeat;
+  background-size: cover; }
+
 .hero-wrapper {
   width: 100%;
   display: flex;
